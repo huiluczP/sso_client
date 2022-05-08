@@ -30,15 +30,25 @@ spring:
     multipart:
       max-file-size: -1
       max-request-size: -1
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 3000
+
+file:
+  save-path: E:/file/
 
 sso:
   prefix: http://localhost:8080
   login-page: /user/login
   validate: /validate
   logout: /logout
-
-file:
-  save-path: E:/file/
 
 token:
   over-time: 3000
